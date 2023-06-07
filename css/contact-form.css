@@ -1,0 +1,72 @@
+.wpcf7 {
+  border: 1px solid var(--dark);
+}
+.wpcf7 form div br {
+  display: none;
+}
+@media screen and (min-width: 900px) {
+  .wpcf7 form div {
+    display: flex;
+    border-bottom: 1px solid var(--dark);
+  }
+  .wpcf7 form div p:first-child {
+    width: 130px;
+  }
+  .wpcf7 form div p:last-child {
+    flex: 1;
+  }
+}
+.wpcf7 form div p:first-child:not(.submit-wrap) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--dark);
+  color: #FFF;
+}
+.wpcf7 form div p:first-child:not(.submit-wrap) label {
+  margin: 5px;
+}
+.wpcf7 form div p:last-child {
+  display: flex;
+}
+.wpcf7 form div p:last-child > span {
+  flex: 1;
+  margin: 5px;
+}
+.wpcf7 form div p:last-child > span * {
+  display: block;
+  width: 100%;
+  padding: 5px;
+  border: 1px solid #CCC;
+  outline: none;
+  transition: all 0.3s;
+}
+.wpcf7 form div p:last-child > span *::placeholder {
+  font-size: 0.9em;
+  color: #999;
+  font-style: italic;
+}
+.wpcf7 form div p:last-child > span *:focus {
+  background: var(--orange);
+  border-color: var(--orange);
+  color: #FFF;
+}
+.wpcf7 form div p:last-child > span *:focus::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+.wpcf7 form input[type=submit] {
+  display: block;
+  width: 100%;
+  margin-top: 10px;
+  padding: 5px 0;
+  border: none;
+  background: var(--dark);
+  color: #FFF;
+  transition: all 0.3s;
+}
+.wpcf7 form input[type=submit]:hover {
+  background: var(--orange);
+}
+.wpcf7 form .wpcf7-spinner {
+  display: none;
+}/*# sourceMappingURL=contact-form.css.map */

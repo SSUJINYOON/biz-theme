@@ -1,0 +1,101 @@
+.home-section2 {
+  .bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    filter: brightness(0.6);
+  } //img.bg
+  ul {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    @media screen and (orientation: landscape) {
+      flex-direction: row;
+    } //ul land
+    @media screen and (orientation: portrait) {
+      flex-direction: column;
+    } //ul port
+    li {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex: 1;
+      @media screen and (orientation: landscape) {
+        border-right: 1px solid rgba(#fff, 0.5);
+      } //li land
+      @media screen and (orientation: portrait) {
+        border-bottom: 1px solid rgba(#fff, 0.5);
+      } //li port
+      .textbox {
+        text-align: center;
+        color: #fff;
+        h3 {
+          font-size: 2em;
+        } //h2
+        span {
+          position: relative;
+          display: block;
+          width: 40px;
+          height: 40px;
+          margin: 20px auto;
+          &::before,
+          &::after {
+            content: "";
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+          } //after,before
+          &::before {
+            width: 100%;
+            border-bottom: 1px solid #fff;
+          }
+          &::after {
+            height: 100%;
+            border-left: 1px solid #fff;
+          }
+        } //span
+        div.wrap {
+          p {
+            margin-bottom: 20px;
+          } //p
+          a {
+            display: inline-block;
+            padding: 10px 35px;
+            border: 1px solid #fff;
+            transition: all 0.3s;
+            &:hover{
+              border-color:var(--blue);
+              background-color: var(--blue);
+            }
+          } //a
+        }
+      } //textbox
+
+      /*li hover motion------------------ */
+      transition: background-color 0.3s, flex 0.3s; 
+      .textbox {
+        span::before{
+          width: 0;
+          transition: width 1s;
+        }
+        .wrap {
+          display: none;
+        }
+      } //textbox
+      &:hover {
+        background-color: rgba(#fff, 0.2);
+        backdrop-filter: blur(5px);
+      } //li:hover
+      &.active {
+        flex: 1.3;
+        span::before{
+          width: 100%;
+        }
+      } //li.active
+    } //li
+  } //ul
+} //home-section2

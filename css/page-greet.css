@@ -1,0 +1,72 @@
+.greet-section .wrap {
+  overflow: hidden;
+}
+@media screen and (min-width: 1000px) {
+  .greet-section .wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .greet-section .wrap img {
+    width: 30%;
+    margin-right: 50px;
+  }
+  .greet-section .wrap .textbox {
+    width: 65%;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .greet-section .wrap img {
+    margin: 0 auto;
+  }
+}
+
+img {
+  /* max-width: 200px;
+  animation: rotation 10s infinite linear;
+  mix-blend-mode: multiply; */
+}
+
+.textbox em {
+  font-size: 1.5em;
+  font-weight: 600;
+}
+.textbox em sub {
+  font-size: 0.7em;
+  vertical-align: middle;
+}
+.textbox p {
+  box-sizing: border-box;
+  padding: 0 20px;
+  margin: 40px 0;
+}
+.textbox p::first-letter {
+  font-size: 1.2em;
+}
+.textbox p::before, .textbox p::after {
+  position: absolute;
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+}
+.textbox p::before {
+  content: "\f10d";
+  transform: translateX(-20px);
+}
+.textbox p::after {
+  content: "\f10e";
+  transform: translateX(5px) translateY(5px);
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}/*# sourceMappingURL=page-greet.css.map */

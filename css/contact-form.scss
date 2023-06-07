@@ -1,0 +1,76 @@
+.wpcf7{//메일보내기 컨테이너
+  border: 1px solid var(--dark);
+  form{//메일폼
+    div{//레이블 폼양식 한줄 
+      br{display: none;}
+      @media screen and (min-width:900px){
+        display: flex;
+        border-bottom: 1px solid var(--dark);
+        p{
+          &:first-child{//lable포함 p
+            width: 130px;
+          }
+          &:last-child{//폼객체를 포함하는 p
+            flex : 1;
+          }
+        }//p
+      }//레이블 폼양식 한줄 lg
+      
+      p:first-child:not(.submit-wrap){
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: var(--dark);
+        color:#FFF;
+        label{
+          margin: 5px;
+        }
+      }//p:first-child
+
+      p:last-child{//폼객체를 포함하는 p
+        display: flex;
+        >span{//폼객체를 포함하는 span
+          flex:1;
+          margin: 5px;
+          *{//input, textarea, select 등등
+            display: block;
+            width: 100%;
+            padding: 5px;
+            border:1px solid #CCC;
+            outline: none;
+            transition: all 0.3s;
+            &::placeholder{
+              font-size: 0.9em;
+              color:#999;
+              font-style: italic;
+            }//plachoder
+            &:focus{
+              background: var(--orange);
+              border-color:var(--orange);
+              color:#FFF;
+              &::placeholder{
+                color:rgba(#FFF,0.5);
+              }//placeholder
+            }//focus
+          }//input, textarea, select 등등
+        }//폼객체를 포함하는 span
+      }//폼객체를 포함하는 p
+    }//레이블 폼양식 한줄
+    input[type=submit]{//전송버튼
+      display: block;
+      width: 100%;
+      margin-top: 10px;
+      padding: 5px 0;
+      border:none;
+      background: var(--dark);
+      color: #FFF;
+      transition: all 0.3s;
+      &:hover{
+        background: var(--orange);
+      }//hover
+    }//전송버튼
+    .wpcf7-spinner{//spinner
+      display: none;
+    }//spinner
+  }//메일폼
+}//메일보내기 컨테이너

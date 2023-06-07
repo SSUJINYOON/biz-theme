@@ -1,0 +1,161 @@
+main.home-main {
+  display: inline;
+  position: relative;
+  z-index: 1;
+}
+main.home-main .home-section-scr {
+  height: 100%;
+}
+main.home-main .home-section {
+  position: fixed;
+  transition: transform 0.3s, -webkit-mask-size 1s;
+  pointer-events: none;
+}
+main.home-main .home-section.active {
+  pointer-events: all;
+  -webkit-mask-size: 100% 100%, 100% 100%;
+}
+@media screen and (min-width: 1100px) {
+  main.home-main .home-section {
+    width: calc(100% - 120px);
+    height: 100%;
+    left: 0;
+    top: 0;
+  }
+}
+@media screen and (max-width: 1100px) {
+  main.home-main .home-section {
+    width: 100%;
+    height: calc(100% - 70px);
+    left: 0;
+    bottom: 0;
+  }
+}
+@media screen and (orientation: landscape) {
+  main.home-main .home-section {
+    -webkit-mask-image: url(../img/home/mask-left.png), url(../img/home/mask-right.png);
+    -webkit-mask-position: left top, right top;
+    -webkit-mask-size: 0% 100%, 0% 100%;
+    -webkit-mask-repeat: no-repeat;
+  }
+}
+@media screen and (orientation: portrait) {
+  main.home-main .home-section {
+    -webkit-mask-image: url(../img/home/mask-top.png), url(../img/home/mask-bottom.png);
+    -webkit-mask-position: left top, left bottom;
+    -webkit-mask-size: 100% 0%, 100% 0%;
+    -webkit-mask-repeat: no-repeat;
+  }
+}
+main.home-main .home-section-content {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+main.home-main .home-section-content .inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  height: 85%;
+  max-width: 1200px;
+  max-height: 700px;
+}
+main.home-main .home-section-content .inner .home-section-title {
+  margin-bottom: 30px;
+  text-align: center;
+  color: #FFF;
+}
+main.home-main .home-section-content .inner .home-section-title h2 {
+  margin-bottom: 10px;
+  font-size: 3em;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+@media screen and (max-width: 800px) {
+  main.home-main .home-section-content .inner .home-section-title h2 {
+    font-size: 2em;
+  }
+}
+
+.scroll-spy {
+  position: fixed;
+  z-index: 2;
+  top: 50%;
+  transform: translateY(-50%);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-left: none;
+  border-right: none;
+  /*hover*/
+  /*active*/
+}
+@media screen and (min-width: 1100px) {
+  .scroll-spy {
+    right: calc(2% + 120px);
+  }
+}
+@media screen and (max-width: 1100px) {
+  .scroll-spy {
+    right: 3%;
+  }
+}
+.scroll-spy button {
+  position: relative;
+  display: block;
+  width: 10px;
+  height: 10px;
+  margin: 30px 0;
+  border-radius: 50%;
+  background: #fff;
+}
+.scroll-spy button i {
+  position: absolute;
+  top: 50%;
+  right: calc(100% + 10px);
+  transform: translateY(-50%);
+  font-size: 0.8em;
+  text-transform: uppercase;
+  color: #fff;
+}
+@media screen and (max-width: 1100px) {
+  .scroll-spy button i {
+    display: none;
+  }
+}
+.scroll-spy::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  height: 100%;
+  border-left: 1px solid rgba(255, 255, 255, 0.5);
+}
+.scroll-spy button:hover i {
+  display: block;
+  text-decoration: underline;
+}
+.scroll-spy button.active i {
+  padding: 2px 7px;
+  background: #fff;
+  color: var(--orange);
+}
+.scroll-spy button.active i::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  left: 100%;
+  top: 0;
+  border: 10px solid transparent;
+  border-left-color: #fff;
+}
+@media screen and (max-width: 1100px) {
+  .scroll-spy button.active i {
+    display: block;
+  }
+}/*# sourceMappingURL=home.css.map */

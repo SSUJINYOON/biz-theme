@@ -1,0 +1,47 @@
+.home-section5 {
+  background-image: url(../img/home/section2-5.jpg);
+}
+.home-section5 #particles-js {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+.home-section5 .latest {
+  width: 100%;
+  max-width: 1200px;
+  height: 85%;
+  max-height: 700px;
+}
+.home-section5 .latest .tabmenu {
+  display: flex;
+}
+.home-section5 .latest .tabmenu button {
+  flex: 1;
+  margin-left: -1px;
+  height: 50px;
+  color: #FFF;
+  border: 1px solid #FFF;
+  transition: all 0.3s;
+}
+.home-section5 .latest .tabmenu button:hover {
+  background: rgba(255, 255, 255, 0.5);
+}
+.home-section5 .latest .tabmenu button.active {
+  background: #FFF;
+  color: var(--blue);
+}
+.home-section5 .latest > div.latest-board {
+  display: none;
+  color: #FFF;
+}
+.home-section5 .latest > div.latest-board.latest-notice {
+  display: block;
+}
+.home-section5 .latest > div.latest-board table th {
+  background: rgba(255, 255, 255, 0.2);
+}
+.home-section5 .latest > div.latest-board table td, .home-section5 .latest > div.latest-board table th {
+  padding: 15px 10px !important;
+}/*# sourceMappingURL=home-section5.css.map */

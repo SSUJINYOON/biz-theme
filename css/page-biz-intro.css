@@ -1,0 +1,71 @@
+.biz-intro-section ol {
+  display: flex;
+}
+@media screen and (min-width: 1000px) {
+  .biz-intro-section ol {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .biz-intro-section ol {
+    max-width: 700px;
+    margin: 0 auto;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .biz-intro-section ol > li {
+    width: 48%;
+  }
+}
+.biz-intro-section ol b {
+  position: relative;
+  display: block;
+  padding: 20px;
+  color: #ccc;
+  font-size: 2.5em;
+}
+.biz-intro-section ol b::before, .biz-intro-section ol b::after {
+  content: "";
+  position: absolute;
+  width: 2px;
+  left: 0;
+  top: 0;
+}
+.biz-intro-section ol b::before {
+  height: 100%;
+  background: #ccc;
+}
+.biz-intro-section ol b::after {
+  height: 15px;
+  background: #666;
+}
+.biz-intro-section ol figure figcaption {
+  padding: 25px;
+  background: #eee;
+}
+.biz-intro-section ol figure figcaption h3 {
+  margin-bottom: 10px;
+  font-size: 1.2em;
+  font-weight: 600;
+  color: var(--blue);
+}
+.biz-intro-section ol figure figcaption ul {
+  counter-reset: counter1;
+}
+.biz-intro-section ol figure figcaption ul li::before {
+  counter-increment: counter1;
+  content: counter(counter1);
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  line-height: 30px;
+  background: #fff;
+  border-radius: 50%;
+  font-size: 0.85em;
+}
+.biz-intro-section ol figure img {
+  width: 100%;
+}/*# sourceMappingURL=page-biz-intro.css.map */

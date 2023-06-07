@@ -1,0 +1,177 @@
+.history-section {
+  /* active */
+}
+.history-section ol.history > li {
+  position: relative;
+  box-sizing: border-box;
+}
+@media screen and (min-width: 1000px) {
+  .history-section ol.history > li {
+    display: flex;
+    align-items: center;
+    padding: 40px;
+  }
+  .history-section ol.history > li:nth-child(odd) div {
+    text-align: right;
+  }
+  .history-section ol.history > li:nth-child(odd) h3::before {
+    right: 0;
+  }
+  .history-section ol.history > li:nth-child(odd) h3::after {
+    right: calc(0% - 5px);
+  }
+  .history-section ol.history > li:nth-child(even) {
+    flex-direction: row-reverse;
+  }
+  .history-section ol.history > li:nth-child(even) h3::before {
+    left: 0;
+  }
+  .history-section ol.history > li:nth-child(even) h3::after {
+    left: calc(0% - 5px);
+  }
+  .history-section ol.history > li:nth-child(even) figure {
+    text-align: right;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .history-section ol.history > li {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+}
+.history-section ol.history > li::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  border-right: 1px solid var(--blue);
+}
+@media screen and (min-width: 1000px) {
+  .history-section ol.history > li::before {
+    left: 50%;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .history-section ol.history > li > div {
+    width: 50%;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .history-section ol.history > li > div {
+    margin-bottom: 20px;
+  }
+}
+.history-section ol.history > li > div h3 {
+  position: relative;
+  color: var(--blue);
+  padding-bottom: 15px;
+  margin-bottom: 20px;
+}
+.history-section ol.history > li > div h3::before, .history-section ol.history > li > div h3::after {
+  content: "";
+  position: absolute;
+}
+.history-section ol.history > li > div h3::before {
+  width: 100%;
+  bottom: 0;
+  border-top: 1px solid var(--blue);
+}
+.history-section ol.history > li > div h3::after {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--blue);
+  bottom: calc(0% - 5px);
+}
+@media screen and (min-width: 1000px) {
+  .history-section ol.history > li > div h3 {
+    padding: 0 40px;
+    font-size: 2.5em;
+    font-weight: 100;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .history-section ol.history > li > div h3 {
+    font-size: 1.5em;
+    font-weight: 600;
+  }
+  .history-section ol.history > li > div h3::after {
+    left: 0;
+  }
+}
+.history-section ol.history > li > div h3 sub {
+  font-size: 0.8em;
+  vertical-align: middle;
+}
+@media screen and (min-width: 1000px) {
+  .history-section ol.history > li > div > ul {
+    padding: 0 40px;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .history-section ol.history > li > div > ul {
+    padding: 0;
+  }
+}
+.history-section ol.history > li > div > ul > li {
+  padding: 5px 0;
+}
+.history-section ol.history > li > div > ul > li em {
+  color: var(--blue);
+  font-size: 0.8em;
+  font-weight: 600;
+}
+.history-section ol.history > li > div > ul > li em::before {
+  content: "- ";
+}
+.history-section ol.history > li figure {
+  box-sizing: border-box;
+}
+@media screen and (min-width: 1000px) {
+  .history-section ol.history > li figure {
+    width: 50%;
+    padding: 0 40px;
+  }
+}
+.history-section ol.history > li figure img {
+  display: inline-block;
+  object-fit: cover;
+  object-position: center;
+  width: 32%;
+  height: 120px;
+  box-sizing: border-box;
+  padding: 5px;
+  background: #ddd;
+  border: 1px solid #777;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+@media screen and (min-width: 1000px) {
+  .history-section ol.history > li figure img:nth-child(odd) {
+    transform: translateY(10%);
+  }
+  .history-section ol.history > li figure img:nth-child(even) {
+    transform: translateY(-10%);
+  }
+}
+.history-section ol.history > li::before {
+  height: 0;
+  transition: height 1s;
+}
+.history-section ol.history > li > div h3::before, .history-section ol.history > li > div h3::after {
+  transition: all 1s;
+}
+.history-section ol.history > li > div h3::before {
+  width: 0;
+}
+.history-section ol.history > li > div h3::after {
+  opacity: 0;
+}
+.history-section ol.history > li.active::before {
+  height: 100%;
+}
+.history-section ol.history > li.active > div h3::before {
+  width: 100%;
+}
+.history-section ol.history > li.active > div h3::after {
+  opacity: 1;
+}/*# sourceMappingURL=page-history.css.map */

@@ -1,0 +1,76 @@
+@media screen and (min-width: 1000px) {
+  .biz-area-section ul li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .biz-area-section ul li:nth-child(odd) {
+    flex-direction: row-reverse;
+  }
+  .biz-area-section ul li:nth-child(even) {
+    text-align: right;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .biz-area-section ul li {
+    max-width: 700px;
+    margin: 0 auto;
+  }
+}
+.biz-area-section ul li .textbox {
+  position: relative;
+}
+@media screen and (min-width: 1000px) {
+  .biz-area-section ul li .textbox {
+    padding: 0 50px;
+    width: 50%;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .biz-area-section ul li .textbox {
+    padding: 30px 0;
+  }
+}
+.biz-area-section ul li .textbox h3 {
+  margin-bottom: 10px;
+  font-size: 1.5em;
+  font-weight: 600;
+  color: var(--blue);
+  border-bottom: 1px dotted var(--blue);
+}
+.biz-area-section ul li .textbox p {
+  margin-bottom: 30px;
+}
+.biz-area-section ul li .textbox a {
+  display: inline-block;
+  padding: 7px 15px;
+  border: 1px dotted var(--blue);
+  color: var(--blue);
+}
+.biz-area-section ul li .textbox a:hover {
+  background: var(--blue);
+  color: #fff;
+}
+.biz-area-section ul li figure {
+  position: relative;
+}
+@media screen and (min-width: 1000px) {
+  .biz-area-section ul li figure {
+    width: 40%;
+  }
+}
+.biz-area-section ul li figure::before {
+  content: "";
+  display: block;
+  padding-top: 100%;
+}
+.biz-area-section ul li figure img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-position: center;
+  top: 0;
+  box-sizing: border-box;
+  padding: 10px;
+  background: #fff;
+}/*# sourceMappingURL=page-biz-area.css.map */

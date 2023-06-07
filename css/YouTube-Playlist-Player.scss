@@ -1,0 +1,25 @@
+.fluid-vids {
+  max-width: 1000px;
+  margin: 10px auto;
+  border:10px solid #666;
+  box-shadow: 0 0 10px rgba(#000,0.2);
+}
+
+
+#ytpp-playlist-container{
+  >div{
+    justify-content: center;
+    a{
+      display: block;
+      overflow: hidden;
+      margin: 10px;
+      border:5px solid #666;
+      flex-basis:auto !important;
+      box-shadow: 0 0 10px rgba(#000,0.2);
+      img{
+        max-width: 200px;
+        transform: scale(1.4);
+      }
+    }
+  }
+}

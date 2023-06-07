@@ -1,0 +1,48 @@
+@import 'mixin';
+
+nav.outlogin{
+  @media screen and (min-width:1100px) {
+    position: fixed;
+    z-index: 12;
+    right: calc(120px + 5%);
+    top:50px;
+  }//lg
+  @media screen and (max-width:1100px) {
+    display: none;
+  }//sm
+}//nav.outlogin
+
+.gnb>ul.login-menu{
+  @media screen and (min-width:1100px) {
+    display: none;
+  }//lg
+  @media screen and (max-width:1100px) {
+    position: absolute;
+    top:10px; 
+    left: 50%;
+    transform: translateX(-50%);
+  }//sm
+}//.gnb>ul.login-menu
+
+
+ul.login-menu{
+  display: flex;
+  padding: 5px 20px;
+  border-radius: 30px;
+  border:1px solid #CCC;
+  background: rgba(#FFF,0.7);
+  li{
+    margin:0 6px;
+    a{
+      display: block;
+      color:var(--dark);
+      text-transform: uppercase;
+      font-size: 0.8em; 
+      font-weight: 600;
+      white-space: nowrap;
+      &:hover{
+        color: var(--orange);
+      }
+    }
+  }
+}//ul.login-menu

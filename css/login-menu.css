@@ -1,0 +1,49 @@
+@media screen and (min-width: 1100px) {
+  nav.outlogin {
+    position: fixed;
+    z-index: 12;
+    right: calc(120px + 5%);
+    top: 50px;
+  }
+}
+@media screen and (max-width: 1100px) {
+  nav.outlogin {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1100px) {
+  .gnb > ul.login-menu {
+    display: none;
+  }
+}
+@media screen and (max-width: 1100px) {
+  .gnb > ul.login-menu {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+ul.login-menu {
+  display: flex;
+  padding: 5px 20px;
+  border-radius: 30px;
+  border: 1px solid #CCC;
+  background: rgba(255, 255, 255, 0.7);
+}
+ul.login-menu li {
+  margin: 0 6px;
+}
+ul.login-menu li a {
+  display: block;
+  color: var(--dark);
+  text-transform: uppercase;
+  font-size: 0.8em;
+  font-weight: 600;
+  white-space: nowrap;
+}
+ul.login-menu li a:hover {
+  color: var(--orange);
+}/*# sourceMappingURL=login-menu.css.map */

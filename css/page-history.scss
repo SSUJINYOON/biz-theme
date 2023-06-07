@@ -1,0 +1,215 @@
+.history-section {
+  ol.history {
+    >li{
+      position: relative;
+      box-sizing: border-box;
+      @media screen and (min-width: 1000px) {
+        display: flex;
+        align-items: center;
+        padding: 40px;
+        &:nth-child(odd) {
+          div {text-align: right;}
+          h3::before {
+            right: 0;
+          }
+          h3::after {
+            right: calc(0% - 5px);
+          }
+        }
+        &:nth-child(even) {
+          flex-direction: row-reverse;
+          h3::before {
+            left: 0;
+          }
+          h3::after {
+            left: calc(0% - 5px);
+          }
+          figure{
+            text-align: right;
+          }
+        }
+      }//li lg
+      @media screen and (max-width: 1000px) {
+        max-width: 700px;
+        margin: 0 auto;
+        padding: 20px;
+      }//li sm
+      &::before {
+        content: "";
+        position: absolute;
+        height: 100%;
+        border-right: 1px solid var(--blue);
+        @media screen and (min-width: 1000px) {
+          left: 50%;
+        }//li::before lg
+        @media screen and (max-width: 1000px) {
+          
+        }//li::before sm
+      }
+      >div {
+        @media screen and (min-width: 1000px) {
+          width: 50%;
+        }//div lg
+        @media screen and (max-width: 1000px) {
+          margin-bottom: 20px;
+        }//div sm
+        h3{
+          position: relative;
+          color: var(--blue);
+          padding-bottom: 15px;
+          margin-bottom: 20px;
+          &::before, &::after {
+            content: '';
+            position: absolute;
+          }//before, after
+          &::before {
+            width: 100%;
+            bottom: 0;
+            border-top: 1px solid var(--blue);
+          }
+          &::after {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: var(--blue);
+            bottom: calc(0% - 5px);
+          }
+          @media screen and (min-width: 1000px) {
+            padding: 0 40px;
+            font-size: 2.5em;
+            font-weight: 100;
+          }//h3 lg
+          @media screen and (max-width: 1000px) {
+            font-size: 1.5em;
+            font-weight: 600;
+            &::after {
+              left: 0;
+            }
+          }//h3 sm
+          sub {
+            font-size: 0.8em;
+            vertical-align: middle;
+          }
+        }//h3
+        >ul{
+          @media screen and (min-width: 1000px) {
+            padding: 0 40px;
+          }//ul lg
+          @media screen and (max-width: 1000px) {
+            padding: 0;
+          }
+          >li{
+            padding: 5px 0;
+            
+            em{
+              color: var(--blue);
+              font-size: 0.8em;
+              font-weight: 600;
+              &::before {
+                content: '- ';
+              }
+            }
+            b{
+
+            }
+          }
+        }
+      }
+      figure{
+        box-sizing: border-box;
+        @media screen and (min-width: 1000px) {
+          width: 50%;
+          padding: 0 40px;
+        }//figure lg
+        @media screen and (max-width: 1000px) {
+          
+        }//figure sm
+        img {
+          display: inline-block;
+          object-fit: cover;
+          object-position: center;
+          width: 32%;
+          height: 120px;
+          box-sizing: border-box;
+          padding: 5px;
+          background: #ddd;
+          border: 1px solid #777;
+          box-shadow: 0 0 5px rgba(#000, 0.2);
+          @media screen and (min-width: 1000px) {
+            &:nth-child(odd){
+              transform: translateY(10%);
+            }
+            &:nth-child(even) {
+              transform: translateY(-10%);
+            }
+          }//figure img lg
+        }
+      }
+    }//li
+  }//ol
+  
+  /* active */
+  ol.history {
+    >li{
+      &::before {
+        height: 0;
+        transition: height 1s;
+      }
+      >div {
+        h3{
+          &::before, &::after {
+            transition: all 1s;
+          }
+          &::before{
+            width: 0;
+          }
+          &::after {
+            opacity: 0;
+          }
+        }//h3
+        >ul{
+          >li{
+            em{
+
+            }
+            b{
+
+            }
+          }
+        }
+      }
+      figure{
+
+      }
+    }//li
+
+    >li.active{
+      &::before {
+        height: 100%;
+      }
+      >div {
+        h3{
+          &::before {
+            width: 100%;
+          }
+          &::after{
+            opacity: 1;
+          }
+        }//h3
+        >ul{
+          >li{
+            em{
+
+            }
+            b{
+
+            }
+          }
+        }
+      }
+      figure{
+
+      }
+    }//li
+  }//ol
+}//his-sec
